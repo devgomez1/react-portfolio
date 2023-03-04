@@ -3,27 +3,24 @@ import React from "react";
 function nav(props) {
   const { currentTab, setCurrentTab } = props;
   return (
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">
-          Active
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          Link
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          Link
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">
-          Disabled
-        </a>
-      </li>
-    </ul>
+    <nav>
+      <ul className="justify-content-center">
+        <li className={currentTab === "about"}>
+          <span onClick={() => setCurrentTab("about")}>About Me</span>
+        </li>
+
+        <li className={currentTab === "portfolio"}>
+          <span onClick={() => setCurrentTab("portfolio")}>Portfolio</span>
+        </li>
+
+        <li className={currentTab === "contact"}>
+          <span onClick={() => setCurrentTab("contact")}>Contact</span>
+        </li>
+
+        <li className={currentTab === "resume"}>
+          <span onClick={() => setCurrentTab("resume")}>Resume</span>
+        </li>
+      </ul>
+    </nav>
   );
 }
