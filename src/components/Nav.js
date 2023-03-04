@@ -24,3 +24,5 @@ function nav(props) {
     </nav>
   );
 }
+
+export default nav;
