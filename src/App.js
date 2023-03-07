@@ -5,22 +5,23 @@ import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
 import Footer from "./components/Footer";
+
 import "./App.css";
 
 function App() {
-  const [currentTab, setCurrentTab] = useState("about");
+  const [activeTab, changeTab] = useState("about");
 
   const renderTab = () => {
-    if (currentTab === "About") {
+    if (activeTab === "About") {
       return <About />;
     }
-    if (currentTab === "Contact") {
+    if (activeTab === "Contact") {
       return <Contact />;
     }
-    if (currentTab === "Portfolio") {
+    if (activeTab === "Portfolio") {
       return <Portfolio />;
     }
-    if (currentTab === "Resume") {
+    if (activeTab === "Resume") {
       return <Resume />;
     }
     return null;

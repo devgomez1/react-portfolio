@@ -1,28 +1,28 @@
 import React from "react";
 
-function nav(props) {
-  const { currentTab, setCurrentTab } = props;
+function Nav(props) {
+  const { activeTab, changeTab } = props;
   return (
     <nav>
       <ul className="justify-content-center">
-        <li className={currentTab === "about"}>
-          <span onClick={() => setCurrentTab("about")}>About Me</span>
+        <li className={activeTab === "about"}>
+          <span onClick={() => changeTab("about")}>About Me</span>
         </li>
 
-        <li className={currentTab === "portfolio"}>
-          <span onClick={() => setCurrentTab("portfolio")}>Portfolio</span>
+        <li className={activeTab === "portfolio"}>
+          <span onClick={() => changeTab("portfolio")}>Portfolio</span>
         </li>
 
-        <li className={currentTab === "contact"}>
-          <span onClick={() => setCurrentTab("contact")}>Contact</span>
+        <li className={activeTab === "contact"}>
+          <span onClick={() => changeTab("contact")}>Contact</span>
         </li>
 
-        <li className={currentTab === "resume"}>
-          <span onClick={() => setCurrentTab("resume")}>Resume</span>
+        <li className={activeTab === "resume"}>
+          <span onClick={() => changeTab("resume")}>Resume</span>
         </li>
       </ul>
     </nav>
   );
 }
 
-export default nav;
+export default Nav;
